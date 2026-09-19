@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vender embriones · Ganadería Queirugueira</title>
+<meta name="description" content="Ofrece tus embriones en la web de la Ganadería Queirugueira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="vender" class="antialiased">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="bg-forest text-white">
+    <div id="page-head" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl">Vende tus embriones con nosotros</h1>
+      <p class="mt-4 text-white/75 text-lg max-w-2xl">Publicamos tus lotes ante compradores de toda España y Europa. Revisamos la genealogía y la documentación sanitaria.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1fr_1.4fr] gap-14 items-start">
+      <div>
+        <h2 class="text-2xl font-extrabold tracking-tight text-forest">Qué necesitamos de ti</h2>
+        <ul class="mt-6 space-y-4 text-forest/80">
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-forest shrink-0 mt-0.5"></i> Padre y madre de los embriones</li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-forest shrink-0 mt-0.5"></i> La prueba completa del toro en PDF</li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-forest shrink-0 mt-0.5"></i> Número, grado y tipo de embriones (FIV o convencional) y sexo</li>
+          <li class="flex gap-3"><i data-lucide="check-circle-2" class="w-5 h-5 text-forest shrink-0 mt-0.5"></i> Documentación sanitaria de la explotación</li>
+        </ul>
+        <p class="mt-6 text-sm text-forest/60">Los datos de la madre son opcionales: publicamos los que quieras compartir.</p>
+      </div>
+      <form id="form-consign" class="bg-paper rounded-2xl p-6 sm:p-8 grid gap-4 text-forest" novalidate>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="grid gap-1.5 text-sm font-semibold">Nombre y apellidos
+          <input name="nombre" required autocomplete="name" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Explotación / Ganadería
+          <input name="explotacion" required autocomplete="organization" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Teléfono
+          <input name="telefono" type="tel" required autocomplete="tel" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Email
+          <input name="email" type="email" required autocomplete="email" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Padre (toro)
+          <input name="padre"  class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Madre (opcional)
+          <input name="madre"  class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Raza
+            <select name="raza" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest bg-white"><option>Frisona (Holstein)</option><option>Jersey</option><option>Pardo Alpina</option><option>Rubia Gallega</option><option>Otra</option></select></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Nº de embriones
+          <input name="cantidad" type="number" min="1" required class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+        </div>
+        <label class="grid gap-1.5 text-sm font-semibold">Enlace a la prueba del toro en PDF (si ya la tienes en la nube)
+          <input name="pdf" type="url" placeholder="https://" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+        <label class="grid gap-1.5 text-sm font-semibold">Observaciones
+          <textarea name="detalle" rows="4" placeholder="Grado, tipo (FIV / convencional), sexo, precio de salida…" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></textarea></label>
+        <label class="flex items-start gap-2 text-sm text-forest/80"><input type="checkbox" required class="mt-1 accent-[#0f2e23]">
+          <span>Acepto la <a href="#" class="underline">política de privacidad (RGPD)</a> y el tratamiento de mis datos.</span></label>
+        <div class="flex flex-wrap gap-3 pt-1">
+          <button type="submit" class="bg-forest text-white font-semibold px-6 py-3 rounded-full hover:bg-forest2 transition">Enviar solicitud por email</button>
+          <button type="button" id="consign-wa" class="border border-forest/25 font-semibold px-6 py-3 rounded-full hover:bg-white transition">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

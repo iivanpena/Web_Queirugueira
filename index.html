@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ganadería Queirugueira · Subasta y venta de embriones bovinos de élite</title>
+<meta name="description" content="Subastas y venta directa de embriones bovinos de alta genética. Solicita tu número de pujador y participa.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="home" class="antialiased">
+
+<div id="site-header"></div>
+
+<main>
+  <!-- HERO con parallax: cada capa se mueve a distinta velocidad (data-speed) -->
+  <section id="inicio" class="relative overflow-hidden bg-forest min-h-[86vh] flex items-center">
+    <div class="hero-layer" data-speed="20" style="background:
+        radial-gradient(60% 45% at 22% 68%, rgba(212,175,55,.55), transparent 70%),
+        linear-gradient(180deg, #0a2019 0%, #0f2e23 42%, #1d5c45 78%, #2d7a5a 100%);"></div>
+    <div class="hero-layer" data-speed="12" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><path d="M0 560 C200 480 400 500 640 540 S1100 470 1300 500 S1500 540 1600 520 V900 H0Z" fill="#1a5240" opacity=".85"/></svg>
+    </div>
+    <div class="hero-layer" data-speed="7" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><path d="M0 660 C260 600 480 640 760 620 S1240 580 1600 640 V900 H0Z" fill="#0f3a2c"/></svg>
+    </div>
+    <div class="hero-layer" data-speed="0" aria-hidden="true">
+      <svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice"><path d="M0 770 C300 725 620 785 900 752 S1400 722 1600 764 V900 H0Z" fill="#0a2019"/></svg>
+    </div>
+    <div class="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/30 pointer-events-none"></div>
+
+    <div id="hero-content" class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-24 w-full">
+      <p class="text-gold font-semibold mb-5">Ganadería Queirugueira · Subasta y venta directa</p>
+      <h1 class="text-white font-extrabold tracking-tight leading-[1.04] text-5xl sm:text-6xl lg:text-7xl max-w-4xl">Genética Bovina de Élite a tu Alcance</h1>
+      <p class="mt-6 text-lg sm:text-xl text-white/80 max-w-2xl">Subastas y venta directa de embriones de las mejores familias de vacas del mundo.</p>
+      <div class="mt-10 flex flex-wrap gap-3">
+        <a href="subastas.html" class="bg-gold text-forest font-bold px-7 py-3.5 rounded-full hover:brightness-110 transition">Ver Lotes Disponibles</a>
+        <a href="como-funciona.html" class="border border-white/40 text-white font-semibold px-7 py-3.5 rounded-full hover:bg-white/10 transition">Cómo Pujar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Estadísticas con contador animado -->
+  <section class="bg-paper">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid sm:grid-cols-3 gap-10 sm:gap-6">
+      <div class="sm:border-r border-forest/15 sm:pr-6">
+        <div class="text-5xl lg:text-6xl font-extrabold text-forest tracking-tight"><span class="counter" data-target="500" data-prefix="+"></span></div>
+        <p class="mt-2 text-forest/70 font-medium">Embriones implantados con éxito</p>
+      </div>
+      <div class="sm:border-r border-forest/15 sm:px-6">
+        <div class="text-5xl lg:text-6xl font-extrabold text-forest tracking-tight"><span class="counter" data-target="98" data-suffix="%"></span></div>
+        <p class="mt-2 text-forest/70 font-medium">Tasa de concepción en lotes FIV</p>
+      </div>
+      <div class="sm:pl-6">
+        <div class="text-5xl lg:text-6xl font-extrabold text-forest tracking-tight"><span class="counter" data-target="1" data-prefix="Top " data-suffix="%"></span></div>
+        <p class="mt-2 text-forest/70 font-medium">Genética entre lo mejor de la raza</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Próximos lotes -->
+  <section class="bg-white py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-10">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-forest">Lotes que cierran pronto</h2>
+          <p class="mt-3 text-forest/70">Cada lote incluye la prueba completa del toro, los datos de la madre y certificado sanitario.</p>
+        </div>
+        <a href="subastas.html" class="font-semibold text-forest underline decoration-gold decoration-2 underline-offset-4">Ver todas las subastas</a>
+      </div>
+      <div id="home-lots" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Animales destacados: la imagen se expande al hacer scroll (se rellena desde data.js) -->
+  <section id="featured-expand" class="relative h-screen bg-forest overflow-hidden" aria-label="Animales destacados"></section>
+
+  <section class="bg-paper py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-wrap items-end justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight text-forest">Más familias de la ganadería</h2>
+        <a href="familias.html" class="font-semibold text-forest underline decoration-gold decoration-2 underline-offset-4">Ver todas las familias</a>
+      </div>
+      <div id="featured-grid" class="grid sm:grid-cols-2 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- Llamada a la acción -->
+  <section class="bg-forest text-white py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Empieza a pujar hoy</h2>
+      <p class="mt-4 text-white/75">Solicita tu número de pujador. Es gratuito y tus pujas se muestran siempre de forma anónima.</p>
+      <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <button data-open="modal-registro" class="bg-gold text-forest font-bold px-7 py-3.5 rounded-full hover:brightness-110 transition">Obtener Nº de Pujador</button>
+        <a href="vender.html" class="border border-white/40 font-semibold px-7 py-3.5 rounded-full hover:bg-white/10 transition">Quiero vender mis embriones</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

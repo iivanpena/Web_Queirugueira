@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subastas de embriones · Ganadería Queirugueira</title>
+<meta name="description" content="Lotes de embriones bovinos en subasta y venta inmediata.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="subastas" class="antialiased">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="bg-forest text-white">
+    <div id="page-head" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl">Subastas de embriones</h1>
+      <p class="mt-4 text-white/75 text-lg max-w-2xl">Lotes en subasta y de venta inmediata. Cada lote incluye la prueba completa del toro y certificado sanitario.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-14">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-5 mb-6">
+        <div id="filters" class="flex flex-wrap gap-2" role="group" aria-label="Filtrar lotes">
+          <button class="filter-btn px-4 py-2 rounded-full border border-forest/20 text-sm font-semibold text-forest hover:border-forest transition" data-filter="all" aria-pressed="true">Todos</button>
+          <button class="filter-btn px-4 py-2 rounded-full border border-forest/20 text-sm font-semibold text-forest hover:border-forest transition" data-filter="sexed" aria-pressed="false">Hembras Sexadas</button>
+          <button class="filter-btn px-4 py-2 rounded-full border border-forest/20 text-sm font-semibold text-forest hover:border-forest transition" data-filter="ivf" aria-pressed="false">IVF / FIV</button>
+          <button class="filter-btn px-4 py-2 rounded-full border border-forest/20 text-sm font-semibold text-forest hover:border-forest transition" data-filter="direct" aria-pressed="false">Venta Inmediata</button>
+          <button class="filter-btn px-4 py-2 rounded-full border border-forest/20 text-sm font-semibold text-forest hover:border-forest transition" data-filter="ending" aria-pressed="false">Próximas Finalizaciones</button>
+        </div>
+        <div id="family-chip"></div>
+      </div>
+      <p id="lots-count" class="text-sm text-forest/60 mb-5" aria-live="polite"></p>
+      <div id="lots-grid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+      <p id="lots-empty" class="hidden text-center text-forest/60 py-16">No hay lotes con este filtro ahora mismo. Prueba con otro o vuelve pronto.</p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>

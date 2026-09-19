@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contacto · Ganadería Queirugueira</title>
+<meta name="description" content="Contacta con la Ganadería Queirugueira.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="assets/js/tw-config.js"></script>
+<link rel="stylesheet" href="assets/css/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lucide@0.294.0/dist/umd/lucide.min.js"></script>
+<script src="assets/js/data.js"></script>
+<script defer src="assets/js/app.js"></script>
+</head>
+<body data-page="contacto" class="antialiased">
+
+<div id="site-header"></div>
+
+<main>
+  <section class="bg-forest text-white">
+    <div id="page-head" class="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-20">
+      <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight max-w-3xl">Contacto</h1>
+      <p class="mt-4 text-white/75 text-lg max-w-2xl">Resolvemos tus dudas sobre lotes, pujas, envíos y venta de embriones.</p>
+    </div>
+  </section>
+
+  <section class="bg-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-[1fr_1.3fr] gap-14 items-start">
+      <div class="grid gap-6 text-forest">
+        <div class="flex gap-4"><i data-lucide="map-pin" class="w-5 h-5 text-forest mt-1 shrink-0"></i><div><h2 class="font-bold">Ubicación</h2><p class="text-forest/70">Coucieiro, Val do Dubra, A Coruña, Galicia, España</p></div></div>
+        <div class="flex gap-4"><i data-lucide="phone" class="w-5 h-5 text-forest mt-1 shrink-0"></i><div><h2 class="font-bold">Teléfono y WhatsApp</h2><p class="text-forest/70">+34 623 29 35 51</p></div></div>
+        <div class="flex gap-4"><i data-lucide="mail" class="w-5 h-5 text-forest mt-1 shrink-0"></i><div><h2 class="font-bold">Email</h2><p class="text-forest/70">simoblancoo.sbv@gmail.com</p></div></div>
+        <div class="flex gap-4"><i data-lucide="clock" class="w-5 h-5 text-forest mt-1 shrink-0"></i><div><h2 class="font-bold">Horario</h2><p class="text-forest/70">Lunes a sábado, 9:00 a 19:00</p></div></div>
+      </div>
+      <form id="form-contacto" class="bg-paper rounded-2xl p-6 sm:p-8 grid gap-4 text-forest" novalidate>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <label class="grid gap-1.5 text-sm font-semibold">Nombre
+          <input name="nombre" required autocomplete="name" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+          <label class="grid gap-1.5 text-sm font-semibold">Teléfono (opcional)
+          <input name="telefono" type="tel" autocomplete="tel" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+        </div>
+        <label class="grid gap-1.5 text-sm font-semibold">Email
+          <input name="email" type="email" required autocomplete="email" class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></label>
+        <label class="grid gap-1.5 text-sm font-semibold">Mensaje
+          <textarea name="mensaje" rows="5" required class="border border-forest/20 rounded-lg px-3 py-2.5 font-normal focus:border-forest"></textarea></label>
+        <div class="flex flex-wrap gap-3 pt-1">
+          <button type="submit" class="bg-forest text-white font-semibold px-6 py-3 rounded-full hover:bg-forest2 transition">Enviar por email</button>
+          <button type="button" id="contacto-wa" class="border border-forest/25 font-semibold px-6 py-3 rounded-full hover:bg-white transition">Enviar por WhatsApp</button>
+        </div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+</body>
+</html>
